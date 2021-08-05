@@ -1,3 +1,4 @@
+import { Fragment } from 'react';
 import TeamCard from '../TeamCard';
 
 const empoloyers = [
@@ -5,8 +6,8 @@ const empoloyers = [
     name: 'Erick Willian',
     role: 'Senior backend developer',
     imageUrl: '/images/team/erick.png',
-    twitterUrl: '#',
-    linkedinUrl: 'https://github.com/Erickinhou',
+    githubUrl: 'https://github.com/Erickinhou',
+    linkedinUrl: 'https://www.linkedin.com/in/erick-willian-8553a2133/',
   },
   // More people...
 ];
@@ -27,7 +28,9 @@ export default function Team() {
           </div>
           <ul className="space-y-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:grid-cols-3 lg:gap-8">
             {empoloyers.map((person) => (
-              <TeamCard person={person} />
+              <Fragment key={person?.name}>
+                <TeamCard person={person} />
+              </Fragment>
             ))}
           </ul>
         </div>
