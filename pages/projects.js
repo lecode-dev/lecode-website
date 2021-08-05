@@ -1,20 +1,24 @@
 import Head from 'next/head';
+import { Title } from '../components/Typografy';
+import { Subtitle } from '../components/Typografy';
 import Navbar from '../components/Navbar';
+import ProjectCard from '../components/ProjectCard';
+import Divider from '../components/Divider';
 
 export default function projects() {
   return (
-    <>
+    <main>
       <Head>lecode - About Us</Head>
       <Navbar />
       <div className="relative pt-12">
-        <h2 className="text-center text-3xl leading-8 font-extrabold tracking-tight text-white   sm:text-4xl">
-          Our Projects
-        </h2>
-        <p className="mt-4 max-w-3xl mx-auto text-center text-xl text-gray-500">
+        <Title>Our Projects</Title>
+        <Subtitle>
           We think different, you can see below some of our projects made with
           love.
-        </p>
+        </Subtitle>
       </div>
-    </>
+      <Divider>Projects</Divider>
+      <ProjectCard />
+    </main>
   );
 }

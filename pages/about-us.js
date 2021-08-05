@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
-import ContactUs from '../components/ContactUs';
-import SectionAboutUs from '../components/SectionAboutUs';
+import TeamSession from '../components/TeamSession';
+import AboutUsSection from '../components/AboutUsSection';
 import Footer from '../components/Footer';
 
 export default function AboutUs() {
@@ -9,8 +9,8 @@ export default function AboutUs() {
     <>
       <Head>lecode - About Us</Head>
       <Navbar />
-      <SectionAboutUs />
-      <ContactUs />
+      <AboutUsSection />
+      <TeamSession />
       <Footer />
     </>
   );

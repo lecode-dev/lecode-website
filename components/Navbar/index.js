@@ -6,7 +6,7 @@ import { MenuIcon, XIcon } from '@heroicons/react/outline';
 const navigation = [
   { name: 'Blog', href: '/blog' },
   { name: 'Projects', href: '/projects' },
-  { name: 'About Us', href: '/about-us' }
+  { name: 'About Us', href: '/about-us' },
 ];
 export default function Navbar() {
   return (
@@ -63,9 +63,9 @@ export default function Navbar() {
               <Popover.Panel
                 focus
                 static
-                className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+                className="absolute bg-gray-dark  top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
               >
-                <div className="rounded-lg shadow-md bg-gray-800 ring-1 ring-black ring-opacity-5 overflow-hidden">
+                <div className="rounded-lg shadow-md bg-gray-dark ring-1 ring-black ring-opacity-5 overflow-hidden">
                   <div className="px-5 pt-4 flex items-center justify-between">
                     <div>
                       <img
@@ -75,7 +75,7 @@ export default function Navbar() {
                       />
                     </div>
                     <div className="-mr-2">
-                      <Popover.Button className="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                      <Popover.Button className="bg-gray-dark  rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                         <span className="sr-only">Close main menu</span>
                         <XIcon className="h-6 w-6" aria-hidden="true" />
                       </Popover.Button>
@@ -92,12 +92,6 @@ export default function Navbar() {
                       </a>
                     ))}
                   </div>
-                  <a
-                    href="#"
-                    className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100"
-                  >
-                    Log in
-                  </a>
                 </div>
               </Popover.Panel>
             </Transition>
