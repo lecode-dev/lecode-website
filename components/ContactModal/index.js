@@ -1,12 +1,26 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useRef, useState } from 'react';
+import { axiosApi } from '../../utils/axiosApi';
 import { Dialog, Transition } from '@headlessui/react';
-import { CheckIcon } from '@heroicons/react/outline';
+import { useFormik } from 'formik';
 
-export default function ContactModal({ open, setOpen }) {
-  const [open, setOpen] = useState(true);
-
-  const cancelButtonRef = useRef(null);
+export default function ContactModal({ onClose, open }) {
+  const sendButtonRef = useRef(null);
+  const onSubmit = async (values) => {
+    try {
+      const response = await axiosApi.post(`/contact`, values);
+      console.log('response ->', response.data);
+    } catch (err) {
+      console.log('Email invalido', err);
+    }
+  };
+  const formik = useFormik({
+    initialValues: {
+      email: '',
+      message: '',
+    },
+    onSubmit,
+  });
 
   return (
     <Transition.Root show={open} as={Fragment}>
@@ -14,9 +28,9 @@ export default function ContactModal({ open, setOpen }) {
         as="div"
         static
         className="fixed z-10 inset-0 overflow-y-auto"
-        initialFocus={cancelButtonRef}
+        initialFocus={sendButtonRef}
         open={open}
-        onClose={setOpen}
+        onClose={onClose}
       >
         <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
           <Transition.Child
@@ -47,49 +61,79 @@ export default function ContactModal({ open, setOpen }) {
             leaveFrom="opacity-100 translate-y-0 sm:scale-100"
             leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
           >
-            <div className="inline-block align-bottom bg-white rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
+            <form
+              onSubmit={formik.handleSubmit}
+              className="border-2 border-green-500 inline-block align-bottom bg-gray-dark rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6"
+            >
               <div>
-                <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
-                  <CheckIcon
-                    className="h-6 w-6 text-green-600"
+                <div className="mx-auto flex items-center justify-center">
+                  <img
+                    className="w-24 h-24 object-cover"
+                    src="/images/lecode.png"
                     aria-hidden="true"
                   />
                 </div>
-                <div className="mt-3 text-center sm:mt-5">
-                  <Dialog.Title
-                    as="h3"
-                    className="text-lg leading-6 font-medium text-gray-900"
-                  >
-                    Payment successful
-                  </Dialog.Title>
-                  <div className="mt-2">
-                    <p className="text-sm text-gray-500">
-                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                      Eius aliquam laudantium explicabo pariatur iste dolorem
-                      animi vitae error totam. At sapiente aliquam accusamus
-                      facere verit atis.
+                <div className="mt-1 text-center sm:mt-5">
+                  <div className="mt-">
+                    <label
+                      htmlFor="email"
+                      className="block text-left text-sm font-medium text-green-500"
+                    >
+                      Email
+                    </label>
+                    <div className="mt-1">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        className=" shadow-sm p-2 focus:ring-green-500 focus:border-green-500 block w-full sm:text-sm border-gray-300 rounded-md text-gray-dark"
+                        placeholder="you@example.com"
+                        onChange={formik.handleChange}
+                        value={formik.values.email}
+                      />
+                    </div>
+                  </div>
+                  <div className=" sm:border-gray-200 sm:pt-5">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm text-left font-medium text-green-500 sm:mt-px sm:pt-2"
+                    >
+                      Message
+                    </label>
+                    <p className="my-1 text-left text-sm text-gray-400">
+                      Write something cool :)
                     </p>
+                    <div className="mt-1 sm:mt-0 sm:col-span-2">
+                      <textarea
+                        id="message"
+                        name="message"
+                        rows={4}
+                        className="text-gray-dark p-2 max-w-lg shadow-sm block w-full focus:ring-green-500 focus:border-green-500 sm:text-sm border rounded-md"
+                        onChange={formik.handleChange}
+                        value={formik.values.message}
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="mt-5 sm:mt-6 sm:grid sm:grid-cols-2 sm:gap-3 sm:grid-flow-row-dense">
                 <button
                   type="button"
-                  className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-indigo-600 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:col-start-2 sm:text-sm"
-                  onClick={() => setOpen(false)}
+                  type="submit"
+                  className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:col-start-2 sm:text-sm"
+                  ref={sendButtonRef}
                 >
-                  Deactivate
+                  Send
                 </button>
                 <button
                   type="button"
-                  className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 sm:mt-0 sm:col-start-1 sm:text-sm"
-                  onClick={() => setOpen(false)}
-                  ref={cancelButtonRef}
+                  className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 sm:mt-0 sm:col-start-1 sm:text-sm"
+                  onClick={onClose}
                 >
                   Cancel
                 </button>
               </div>
-            </div>
+            </form>
           </Transition.Child>
         </div>
       </Dialog>
