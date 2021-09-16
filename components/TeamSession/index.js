@@ -4,10 +4,32 @@ import TeamCard from '../TeamCard';
 const empoloyers = [
   {
     name: 'Erick Willian',
-    role: 'Senior backend developer',
+    role: 'CEO',
     imageUrl: '/images/team/erick.png',
     githubUrl: 'https://github.com/Erickinhou',
     linkedinUrl: 'https://www.linkedin.com/in/erick-willian-8553a2133/',
+  },
+  {
+    name: 'Natan Dias',
+    role: 'CTO',
+    imageUrl: '/images/team/natan.jpg',
+    githubUrl: 'https://github.com/natandias',
+    linkedinUrl: 'https://www.linkedin.com/in/natandias',
+  },
+  {
+    name: 'Káren Myllena',
+    role: 'Front-end developer',
+    imageUrl: '/images/team/karen.png',
+    githubUrl: 'https://github.com/karenmscg',
+    linkedinUrl:
+      'https://www.linkedin.com/in/k%C3%A1ren-myllena-gon%C3%A7alves-425b181b2/',
+  },
+  {
+    name: 'Miguel Cunha (Laranjão)',
+    role: 'Back-end developer',
+    imageUrl: '/images/team/larangod.png',
+    githubUrl: 'https://github.com/LaranGod',
+    linkedinUrl: 'https://www.linkedin.com/in/miguel-am%C3%A2ncio-951420213/',
   },
   // More people...
 ];

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
 import { DiJavascript1 } from 'react-icons/di';
 import { MdDeveloperMode, MdChat } from 'react-icons/md';
 import ContactModal from '../ContactModal';
@@ -14,23 +15,23 @@ const supportLinks = [
   {
     name: 'Software development',
     title: 'See last projects',
-    href: '#',
+    href: '/projects',
     description:
-      'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.',
+      'We are specialized to develop high-quality software. We always aim at striking long-term working relations with outstanding clients and everything is notwithstanding premised on quality that surpasses your expectations. ',
     icon: MdDeveloperMode,
   },
   {
-    name: 'Software consulting',
+    name: 'Freelancing',
     title: 'Contact us',
-    href: '#',
     description:
-      'Varius facilisi mauris sed sit. Non sed et duis dui leo, vulputate id malesuada non. Cras aliquet purus dui laoreet diam sed lacus, fames.',
+      'We aim to provide a flawless freelance experience, combining excellent understanding, great communication, and speedy delivery.',
     icon: MdChat,
   },
 ];
 
 export default function AboutUsSection() {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
   const onClose = () => {
     setOpen(false);
   };
@@ -93,13 +94,19 @@ export default function AboutUsSection() {
                   </p>
                 </div>
                 <div className="p-6 rounded-bl-2xl rounded-br-2xl md:px-8">
-                  <a
-                    onClick={() => setOpen(true)}
+                  <span
+                    onClick={() => {
+                      if (link.href) {
+                        router.push(link.href);
+                        return;
+                      }
+                      setOpen(true);
+                    }}
                     className="cursor-pointer text-base font-medium text-green-500 hover:text-green-600"
                   >
                     {link.title}
                     <span aria-hidden="true"> &rarr;</span>
-                  </a>
+                  </span>
                 </div>
               </div>
             ))}
