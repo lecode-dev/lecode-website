@@ -31,6 +31,13 @@ const empoloyers = [
     githubUrl: 'https://github.com/LaranGod',
     linkedinUrl: 'https://www.linkedin.com/in/miguel-am%C3%A2ncio-951420213/',
   },
+  {
+    name: 'Pablo Felipe',
+    role: 'back-end developer',
+    imageUrl: '/images/team/pablo.jpg',
+    githubUrl: 'https://github.com/PabloFLPs',
+    linkedinUrl: 'https://www.linkedin.com/in/pablo-felipe-lnkdn/',
+  },
   // More people...
 ];
 export default function Team() {
