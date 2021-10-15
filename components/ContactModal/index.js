@@ -8,8 +8,10 @@ import { axiosApi } from "../../utils/axiosApi";
 
 export default function ContactModal({ onClose, open }) {
   const sendButtonRef = useRef(null);
+  const [disableButton, setDisableButton] = useState(false);
   const onSubmit = async (values, ...rest) => {
     try {
+      setDisableButton(true);
       const response = await axiosApi.post(`/contact`, values);
       const { message } = response.data;
       toast.success(message, {
@@ -21,6 +23,8 @@ export default function ContactModal({ onClose, open }) {
         draggable: true,
         progress: undefined,
       });
+      setDisableButton(false);
+      onClose();
     } catch (err) {
       toast.error("Invalid Email!", {
         position: "top-right",
@@ -174,6 +178,7 @@ export default function ContactModal({ onClose, open }) {
                         type="button"
                         type="submit"
                         className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:col-start-2 sm:text-sm"
+                        disabled={disableButton}
                         ref={sendButtonRef}
                       >
                         Send
