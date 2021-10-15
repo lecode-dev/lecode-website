@@ -8,8 +8,8 @@ export default function Home() {
         <title>lecode</title>
       </Head>
       <div className="min-h-screen">
-        <div className="relative bg-gray-darkest overflow-hidden">
-          <div className="max-w-7xl mx-auto">
+        <div className="relative h-full bg-gray-darkest overflow-hidden">
+          <div className="mx-auto xl:h-screen">
             <div className="relative z-10 pb-8 bg-gray-darkest sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
               <Navbar />
               <svg

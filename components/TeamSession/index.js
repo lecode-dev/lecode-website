@@ -1,12 +1,42 @@
+import { Fragment } from 'react';
 import TeamCard from '../TeamCard';
 
 const empoloyers = [
   {
     name: 'Erick Willian',
-    role: 'Senior backend developer',
+    role: 'CEO',
     imageUrl: '/images/team/erick.png',
-    twitterUrl: '#',
-    linkedinUrl: 'https://github.com/Erickinhou',
+    githubUrl: 'https://github.com/Erickinhou',
+    linkedinUrl: 'https://www.linkedin.com/in/erick-willian-8553a2133/',
+  },
+  {
+    name: 'Natan Dias',
+    role: 'CTO',
+    imageUrl: '/images/team/natan.jpg',
+    githubUrl: 'https://github.com/natandias',
+    linkedinUrl: 'https://www.linkedin.com/in/natandias',
+  },
+  {
+    name: 'Káren Myllena',
+    role: 'Front-end developer',
+    imageUrl: '/images/team/karen.png',
+    githubUrl: 'https://github.com/karenmscg',
+    linkedinUrl:
+      'https://www.linkedin.com/in/k%C3%A1ren-myllena-gon%C3%A7alves-425b181b2/',
+  },
+  {
+    name: 'Miguel Cunha (Laranjão)',
+    role: 'Back-end developer',
+    imageUrl: '/images/team/larangod.png',
+    githubUrl: 'https://github.com/LaranGod',
+    linkedinUrl: 'https://www.linkedin.com/in/miguel-am%C3%A2ncio-951420213/',
+  },
+  {
+    name: 'Pablo Felipe',
+    role: 'back-end developer',
+    imageUrl: '/images/team/pablo.jpg',
+    githubUrl: 'https://github.com/PabloFLPs',
+    linkedinUrl: 'https://www.linkedin.com/in/pablo-felipe-lnkdn/',
   },
   // More people...
 ];
@@ -27,7 +57,9 @@ export default function Team() {
           </div>
           <ul className="space-y-4 sm:grid sm:grid-cols-2 sm:gap-6 sm:space-y-0 lg:grid-cols-3 lg:gap-8">
             {empoloyers.map((person) => (
-              <TeamCard person={person} />
+              <Fragment key={person?.name}>
+                <TeamCard person={person} />
+              </Fragment>
             ))}
           </ul>
         </div>
