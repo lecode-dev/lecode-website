@@ -106,13 +106,6 @@ export default function ContactModal({ onClose, open }) {
                 >
                   <Form className="border-2 border-green-500 inline-block align-bottom bg-gray-dark rounded-lg px-4 pt-5 pb-4 text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full sm:p-6">
                     <div>
-                      <div className="mx-auto flex items-center justify-center">
-                        <img
-                          className="w-24 h-24 object-cover"
-                          src="/images/lecode.png"
-                          aria-hidden="true"
-                        />
-                      </div>
                       <div className="mt-1 text-center sm:mt-5">
                         <div className="mt-">
                           <label
