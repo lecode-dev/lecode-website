@@ -1,9 +1,58 @@
-import Head from "next/head";
-import Navbar from "../components/Navbar";
+import React, { useState } from 'react'
+import Head from 'next/head'
+import Navbar from '../components/Navbar'
+import { Formik, Form, Field } from 'formik'
+import { ToastContainer, toast } from 'react-toastify'
+import * as Yup from 'yup'
+import { axiosApi } from '../utils/axiosApi.js'
 
 export default function Home() {
+  const [disableButton, setDisableButton] = useState(false)
+  const onSubmit = async (values, ...rest) => {
+    console.log('values -->', values)
+    setDisableButton(true)
+    try {
+      const response = await axiosApi.post(`/contact`, values)
+      const { message } = response.data
+      toast.success(message, {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+    } catch (err) {
+      toast.error('Invalid Email!', {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      })
+    }
+    setTimeout(() => setDisableButton(false), 1500)
+  }
+  const sendMailValidation = Yup.object().shape({
+    email: Yup.string().email('Invalid email').required('Required'),
+  })
   return (
     <>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        theme={'dark'}
+        pauseOnHover
+      />
       <Head>
         <title>lecode</title>
       </Head>
@@ -25,7 +74,7 @@ export default function Home() {
               <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                 <div className="sm:text-center lg:text-left">
                   <h1 className="text-4xl tracking-tight font-extrabold text-gray-200 sm:text-5xl md:text-6xl">
-                    <span className="block xl:inline">A better way to</span>{" "}
+                    <span className="block xl:inline">A better way to</span>{' '}
                     <span className="block text-green-500 xl:inline">
                       connecting People.
                     </span>
@@ -36,37 +85,46 @@ export default function Home() {
                     <br /> You are on right path.
                   </p>
                   <div className="mt-10 sm:mt-12 sm:w-10/12">
-                    <form action="#" className="sm:max-w-xl sm:mx-auto lg:mx-0">
-                      <div className="sm:flex">
-                        <div className="min-w-0 flex-1">
-                          <label htmlFor="email" className="sr-only">
-                            Email address
-                          </label>
-                          <input
-                            id="email"
-                            type="email"
-                            placeholder="Enter your email"
-                            className="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
-                          />
+                    <Formik
+                      initialValues={{ email: '' }}
+                      validationSchema={sendMailValidation}
+                      onSubmit={onSubmit}
+                      action="#"
+                      className="sm:max-w-xl sm:mx-auto lg:mx-0"
+                    >
+                      <Form>
+                        <div className="sm:flex">
+                          <div className="min-w-0 flex-1">
+                            <label htmlFor="email" className="sr-only">
+                              Email address
+                            </label>
+                            <Field
+                              name="email"
+                              type="email"
+                              placeholder="Enter your email"
+                              className="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
+                            />
+                          </div>
+                          <div className="mt-3 sm:mt-0 sm:ml-3">
+                            <button
+                              type="submit"
+                              disabled={disableButton}
+                              className="block w-full py-3 px-4 rounded-md shadow bg-green-500 text-white font-medium hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900 disabled:bg-green-900"
+                            >
+                              Contact Us
+                            </button>
+                          </div>
                         </div>
-                        <div className="mt-3 sm:mt-0 sm:ml-3">
-                          <button
-                            type="submit"
-                            className="block w-full py-3 px-4 rounded-md shadow bg-green-500 text-white font-medium hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
-                          >
-                            Contact Us
-                          </button>
-                        </div>
-                      </div>
-                      <p className="mt-3 text-sm text-gray-400 sm:mt-4">
-                        We will contact you as soon as possible. By providing
-                        your email, you agree to our{" "}
-                        <a href="#" className="font-medium text-white">
-                          terms or service
-                        </a>
-                        .
-                      </p>
-                    </form>
+                        <p className="mt-3 text-sm text-gray-400 sm:mt-4">
+                          We will contact you as soon as possible. By providing
+                          your email, you agree to our{' '}
+                          <a href="#" className="font-medium text-white">
+                            terms or service
+                          </a>
+                          .
+                        </p>
+                      </Form>
+                    </Formik>
                   </div>
                 </div>
               </main>
@@ -82,5 +140,5 @@ export default function Home() {
         </div>
       </div>
     </>
-  );
+  )
 }
