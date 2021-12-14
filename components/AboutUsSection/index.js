@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { useRouter } from 'next/router';
-import { DiJavascript1 } from 'react-icons/di';
-import { MdDeveloperMode, MdChat } from 'react-icons/md';
-import ContactModal from '../ContactModal';
+import { useState } from 'react'
+import { useRouter } from 'next/router'
+import { DiJavascript1 } from 'react-icons/di'
+import { MdDeveloperMode, MdChat } from 'react-icons/md'
+import ContactModal from '../ContactModal'
 
 const supportLinks = [
   {
@@ -27,14 +27,14 @@ const supportLinks = [
       'We aim to provide a flawless freelance experience, combining excellent understanding, great communication, and speedy delivery.',
     icon: MdChat,
   },
-];
+]
 
 export default function AboutUsSection() {
-  const [open, setOpen] = useState(false);
-  const router = useRouter();
+  const [open, setOpen] = useState(false)
+  const router = useRouter()
   const onClose = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+  }
   return (
     <>
       <ContactModal onClose={onClose} open={open} />
@@ -43,7 +43,7 @@ export default function AboutUsSection() {
         <div className="relative pb-32 ">
           <div className="absolute inset-0">
             <img
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover opacity-5"
               src="/images/lecodeBlackWhite.png"
               alt="lecode"
             />
@@ -97,10 +97,10 @@ export default function AboutUsSection() {
                   <span
                     onClick={() => {
                       if (link.href) {
-                        router.push(link.href);
-                        return;
+                        router.push(link.href)
+                        return
                       }
-                      setOpen(true);
+                      setOpen(true)
                     }}
                     className="cursor-pointer text-base font-medium text-green-500 hover:text-green-600"
                   >
@@ -114,5 +114,5 @@ export default function AboutUsSection() {
         </section>
       </section>
     </>
-  );
+  )
 }

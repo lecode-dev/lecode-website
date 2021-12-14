@@ -1,11 +1,11 @@
-import { Fragment } from 'react';
-import TeamCard from '../TeamCard';
+import { Fragment } from 'react'
+import TeamCard from '../TeamCard'
 
 const empoloyers = [
   {
     name: 'Erick Willian',
     role: 'CEO',
-    imageUrl: '/images/team/erick.png',
+    imageUrl: '/images/team/erick2.jpeg',
     githubUrl: 'https://github.com/Erickinhou',
     linkedinUrl: 'https://www.linkedin.com/in/erick-willian-8553a2133/',
   },
@@ -39,7 +39,7 @@ const empoloyers = [
     linkedinUrl: 'https://www.linkedin.com/in/pablo-felipe-lnkdn/',
   },
   // More people...
-];
+]
 export default function Team() {
   return (
     <div className="bg-gray-darkest">
@@ -65,5 +65,5 @@ export default function Team() {
         </div>
       </div>
     </div>
-  );
+  )
 }
