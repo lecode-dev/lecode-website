@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import Navbar from '../components/Navbar';
+import Head from "next/head";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
               <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                 <div className="sm:text-center lg:text-left">
                   <h1 className="text-4xl tracking-tight font-extrabold text-gray-200 sm:text-5xl md:text-6xl">
-                    <span className="block xl:inline">A better way to</span>{' '}
+                    <span className="block xl:inline">A better way to</span>{" "}
                     <span className="block text-green-500 xl:inline">
                       connecting People.
                     </span>
@@ -60,7 +60,7 @@ export default function Home() {
                       </div>
                       <p className="mt-3 text-sm text-gray-400 sm:mt-4">
                         We will contact you as soon as possible. By providing
-                        your email, you agree to our{' '}
+                        your email, you agree to our{" "}
                         <a href="#" className="font-medium text-white">
                           terms or service
                         </a>
@@ -75,7 +75,7 @@ export default function Home() {
           <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
             <img
               className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-              src="/images/team/emerson.png"
+              src="/images/team/erick.png"
               alt=""
             />
           </div>
