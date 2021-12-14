@@ -18,7 +18,7 @@ const empoloyers = [
   },
   {
     name: 'Káren Myllena',
-    role: 'Front-end developer',
+    role: 'Front-End Developer',
     imageUrl: '/images/team/karen.png',
     githubUrl: 'https://github.com/karenmscg',
     linkedinUrl:
@@ -26,17 +26,31 @@ const empoloyers = [
   },
   {
     name: 'Miguel Cunha (Laranjão)',
-    role: 'Back-end developer',
+    role: 'Back-End Developer',
     imageUrl: '/images/team/larangod.png',
     githubUrl: 'https://github.com/LaranGod',
     linkedinUrl: 'https://www.linkedin.com/in/miguel-am%C3%A2ncio-951420213/',
   },
   {
     name: 'Pablo Felipe',
-    role: 'back-end developer',
+    role: 'Back-End Developer',
     imageUrl: '/images/team/pablo.jpg',
     githubUrl: 'https://github.com/PabloFLPs',
     linkedinUrl: 'https://www.linkedin.com/in/pablo-felipe-lnkdn/',
+  },
+  {
+    name: 'Lucas Souza',
+    role: 'Full-Stack Developer',
+    imageUrl: '/images/team/lucas.jpeg',
+    githubUrl: 'https://github.com/lucasfilipess',
+    linkedinUrl: 'https://www.linkedin.com/in/lucas-souza-95b867174/',
+  },
+  {
+    name: 'Daniel Borges',
+    role: 'Back-End Developer',
+    imageUrl: '/images/team/daniel.png',
+    githubUrl: 'https://github.com/DanteBorges',
+    linkedinUrl: 'https://www.linkedin.com/in/daniel-fborges/',
   },
   // More people...
 ]
