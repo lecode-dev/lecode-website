@@ -25,7 +25,7 @@ const empoloyers = [
       'https://www.linkedin.com/in/k%C3%A1ren-myllena-gon%C3%A7alves-425b181b2/',
   },
   {
-    name: 'Miguel Cunha (Laranjão)',
+    name: 'Miguel Cunha',
     role: 'Back-End Developer',
     imageUrl: '/images/team/larangod.png',
     githubUrl: 'https://github.com/LaranGod',
