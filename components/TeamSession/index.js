@@ -27,7 +27,7 @@ const empoloyers = [
   {
     name: 'Miguel Cunha',
     role: 'Back-End Developer',
-    imageUrl: '/images/team/larangod.png',
+    imageUrl: '/images/team/miguel.jpg',
     githubUrl: 'https://github.com/LaranGod',
     linkedinUrl: 'https://www.linkedin.com/in/miguel-am%C3%A2ncio-951420213/',
   },
@@ -51,6 +51,13 @@ const empoloyers = [
     imageUrl: '/images/team/daniel.png',
     githubUrl: 'https://github.com/DanteBorges',
     linkedinUrl: 'https://www.linkedin.com/in/daniel-fborges/',
+  },
+  {
+    name: 'Marianne Matos',
+    role: 'Full-Stack Developer',
+    imageUrl: '/images/team/mari.jpg',
+    githubUrl: 'https://github.com/MariMatos2112',
+    linkedinUrl: 'https://www.linkedin.com/in/marianne-matos-pereira/',
   },
   // More people...
 ]
