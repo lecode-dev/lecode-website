@@ -1,14 +1,16 @@
-import Head from 'next/head';
-import { Title } from '../components/Typografy';
-import { Subtitle } from '../components/Typografy';
-import Navbar from '../components/Navbar';
-import ProjectCard from '../components/ProjectCard';
-import Divider from '../components/Divider';
+import Head from 'next/head'
+import { Title } from '../components/Typografy'
+import { Subtitle } from '../components/Typografy'
+import Navbar from '../components/Navbar'
+import ProjectCard from '../components/ProjectCard'
+import Divider from '../components/Divider'
 
 export default function projects() {
   return (
     <main>
-      <Head>lecode - About Us</Head>
+      <Head>
+        <title>lecode - Projects</title>
+      </Head>
       <Navbar />
       <div className="relative pt-12">
         <Title>Our Projects</Title>
@@ -20,5 +22,5 @@ export default function projects() {
       <Divider>Projects</Divider>
       <ProjectCard />
     </main>
-  );
+  )
 }
