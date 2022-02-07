@@ -23,6 +23,9 @@ export const SeoTags = ({
         content={urlImage}
         key="ogimage"
       />
+      <meta property="og:image:type" content="image/WebP" />
+      <meta property="og:image:width" content="300" />
+      <meta property="og:image:height" content="300" />
       <meta property="og:type" content="website" />
       <meta property="og:site_name" content="Lecode" key="ogsitename" />
       <meta property="og:title" content={title} key="ogtitle" />
