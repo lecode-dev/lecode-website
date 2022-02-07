@@ -11,7 +11,7 @@ const empoloyers = [
   },
   {
     name: 'Natan Dias',
-    role: 'CTO',
+    role: 'Full-Stack',
     imageUrl: '/images/team/natan.jpg',
     githubUrl: 'https://github.com/natandias',
     linkedinUrl: 'https://www.linkedin.com/in/natandias',
