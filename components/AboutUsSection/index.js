@@ -43,7 +43,7 @@ export default function AboutUsSection() {
         <div className="relative pb-32 ">
           <div className="absolute inset-0">
             <img
-              className="w-full h-full object-cover opacity-5"
+              className="w-full h-full object-scale-down object-center opacity-5"
               src="/images/lecodeBlackWhite.png"
               alt="lecode"
             />
