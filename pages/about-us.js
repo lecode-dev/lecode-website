@@ -8,7 +8,7 @@ export default function AboutUs() {
   return (
     <>
       <Head>
-        <title>lecode - About Us</title>
+        <SeoTags title="About-Us" />
       </Head>
       <Navbar />
       <AboutUsSection />

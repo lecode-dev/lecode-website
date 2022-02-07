@@ -11,7 +11,7 @@ export default function projects() {
     <>
       <main>
         <Head>
-          <title>lecode - Projects</title>
+          <SeoTags title="Projects" />
         </Head>
         <Navbar />
         <div className="relative pt-12">

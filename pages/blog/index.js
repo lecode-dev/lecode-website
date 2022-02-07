@@ -5,7 +5,7 @@ export default function Blog() {
   return (
     <>
       <Head>
-        <title>lecode - Blog</title>
+        <SeoTags title="Blog" />
       </Head>
       <Navbar />
       <Container verticalSpace={true}>
