@@ -1,13 +1,13 @@
-import { Fragment } from 'react';
-import Link from 'next/link';
-import { Popover, Transition } from '@headlessui/react';
-import { MenuIcon, XIcon } from '@heroicons/react/outline';
+import { Fragment } from 'react'
+import Link from 'next/link'
+import { Popover, Transition } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const navigation = [
   { name: 'Blog', href: '/blog' },
   { name: 'Projects', href: '/projects' },
   { name: 'About Us', href: '/about-us' },
-];
+]
 export default function Navbar() {
   return (
     <nav className="bg-gray-darkest">
@@ -26,7 +26,8 @@ export default function Navbar() {
                         <span className="sr-only">Workflow</span>
                         <img
                           className="h-14 w-auto sm:h-20"
-                          src="/images/lecode.png"
+                          src="/images/lecode.WebP"
+                          alt="lecode-icon"
                         />
                       </a>
                     </Link>
@@ -99,5 +100,5 @@ export default function Navbar() {
         )}
       </Popover>
     </nav>
-  );
+  )
 }

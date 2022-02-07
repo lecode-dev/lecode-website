@@ -5,6 +5,7 @@ import { Formik, Form, Field } from 'formik'
 import { ToastContainer, toast } from 'react-toastify'
 import * as Yup from 'yup'
 import { axiosApi } from '../utils/axiosApi.js'
+import { SeoTags } from '../components/Seo'
 
 export default function Home() {
   const [disableButton, setDisableButton] = useState(false)
@@ -41,6 +42,9 @@ export default function Home() {
   })
   return (
     <>
+      <Head>
+        <SeoTags />
+      </Head>
       <ToastContainer
         position="top-right"
         autoClose={5000}
@@ -53,9 +57,6 @@ export default function Home() {
         theme={'dark'}
         pauseOnHover
       />
-      <Head>
-        <title>lecode</title>
-      </Head>
       <div className="min-h-screen">
         <div className="relative h-full bg-gray-darkest overflow-hidden">
           <div className="mx-auto xl:h-screen">
@@ -133,8 +134,8 @@ export default function Home() {
           <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
             <img
               className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-              src="/images/team/lecode.jpeg"
-              alt=""
+              src="/images/team/lecode.WebP"
+              alt="lecode-team"
             />
           </div>
         </div>
