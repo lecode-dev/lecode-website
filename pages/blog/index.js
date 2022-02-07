@@ -30,7 +30,7 @@ export default function Blog() {
         <meta property="og:image:height" content="300" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Lecode" />
-        <meta property="og:title" content={title} key="ogtitle" />
+        <meta property="og:title" content="blog" key="ogtitle" />
         <meta
           property="og:description"
           content="We are a software house and a agency specialized in building websites and applications."

@@ -4,7 +4,7 @@ import { Formik, Form, Field } from 'formik'
 import { ToastContainer, toast } from 'react-toastify'
 import * as Yup from 'yup'
 import { axiosApi } from '../utils/axiosApi.js'
-import { SeoTags } from '../components/Seo'
+import Head from 'next/head'
 
 export default function Home() {
   const [disableButton, setDisableButton] = useState(false)
@@ -66,7 +66,7 @@ export default function Home() {
         <meta property="og:image:height" content="300" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Lecode" />
-        <meta property="og:title" content={title} key="ogtitle" />
+        <meta property="og:title" content="lecode" key="ogtitle" />
         <meta
           property="og:description"
           content="We are a software house and a agency specialized in building websites and applications."

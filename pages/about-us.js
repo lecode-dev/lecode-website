@@ -21,15 +21,18 @@ export default function AboutUs() {
         <meta
           property="og:image:secure_url"
           itemprop="image"
-          content={urlImage}
+          content="http://lecode.dev/images/lecode-seo-300.WebP"
         />
-        <link itemprop="thumbnailUrl" href={urlImage} />
+        <link
+          itemprop="thumbnailUrl"
+          href="http://lecode.dev/images/lecode-seo-300.WebP"
+        />
         <meta property="og:image:type" content="image/WebP" />
         <meta property="og:image:width" content="300" />
         <meta property="og:image:height" content="300" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Lecode" />
-        <meta property="og:title" content={title} key="ogtitle" />
+        <meta property="og:title" content="about-us" key="ogtitle" />
         <meta
           property="og:description"
           content="We are a software house and a agency specialized in building websites and applications."
