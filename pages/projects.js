@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar'
 import ProjectCard from '../components/ProjectCard'
 import Divider from '../components/Divider'
 import Footer from '../components/Footer'
+import { SeoTags } from '../components/Seo'
 
 export default function projects() {
   return (
