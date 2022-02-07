@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Navbar from '../../components/Navbar'
 import Container from '../../components/Container'
 import { SeoTags } from '../../components/Seo'
