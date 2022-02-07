@@ -1,6 +1,6 @@
 import Navbar from '../../components/Navbar'
 import Container from '../../components/Container'
-import { SeoTags } from '../components/Seo'
+import { SeoTags } from '../../components/Seo'
 
 export default function Blog() {
   return (
