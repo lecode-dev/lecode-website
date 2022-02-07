@@ -1,4 +1,3 @@
-import Head from 'next/head'
 import { Title } from '../components/Typografy'
 import { Subtitle } from '../components/Typografy'
 import Navbar from '../components/Navbar'
@@ -10,10 +9,8 @@ import { SeoTags } from '../components/Seo'
 export default function projects() {
   return (
     <>
+      <SeoTags title="Projects" />
       <main>
-        <Head>
-          <SeoTags title="Projects" />
-        </Head>
         <Navbar />
         <div className="relative pt-12">
           <Title>Our Projects</Title>

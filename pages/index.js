@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import Head from 'next/head'
 import Navbar from '../components/Navbar'
 import { Formik, Form, Field } from 'formik'
 import { ToastContainer, toast } from 'react-toastify'
@@ -42,15 +41,13 @@ export default function Home() {
   })
   return (
     <>
-      <Head>
-        <SeoTags />
-      </Head>
+      <SeoTags />
       <ToastContainer
         position="top-right"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
-        closeOnClick
+        closeOnClicks
         rtl={false}
         pauseOnFocusLoss
         draggable
