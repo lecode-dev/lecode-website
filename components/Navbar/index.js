@@ -81,14 +81,14 @@ export default function Navbar() {
               <Popover.Panel
                 focus
                 static
-                className="absolute bg-gray-dark  top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+                className="absolute bg-gray-dark z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
               >
                 <div className="rounded-lg shadow-md bg-gray-dark ring-1 ring-black ring-opacity-5 overflow-hidden">
                   <div className="px-5 pt-4 flex items-center justify-between">
                     <div>
                       <img
                         className="h-14 w-auto"
-                        src="/images/lecode.png"
+                        src="/images/lecode.WebP"
                         alt=""
                       />
                     </div>

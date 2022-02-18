@@ -95,21 +95,12 @@ export default function Home() {
         pauseOnHover
       />
       <div className="min-h-screen">
-        <div className="relative h-full bg-gray-darkest overflow-hidden">
+        <div className="relative h-screen bg-gray-darkest overflow-hidden">
           <div className="mx-auto xl:h-screen">
-            <div className="relative z-10 pb-8 bg-gray-darkest sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+            <div className="relative z-10 pb-8 lg:h-screen bg-gray-darkest sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
               <Navbar />
-              {/* <svg
-                className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
-                fill="#1a1b1d"
-                viewBox="0 0 100 100"
-                preserveAspectRatio="none"
-                aria-hidden="true"
-              >
-                <polygon points="50,0 100,0 50,100 0,100" />
-              </svg> */}
 
-              <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+              <main className="mt-2 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                 <div className="sm:text-center lg:text-left">
                   <h1 className="text-4xl tracking-tight font-extrabold text-gray-200 sm:text-5xl md:text-6xl">
                     <span className="block xl:inline">A better way to</span>{' '}
@@ -167,9 +158,9 @@ export default function Home() {
               </main>
             </div>
           </div>
-          <div className="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+          <div className="flex-grow z-20 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
             <img
-              className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+              className="h-full w-full object-cover object-top lg:w-full lg:h-full"
               src="/images/team/lecode.WebP"
               alt="lecode-team"
               style={{ objectPosition: 'center 30%' }}
