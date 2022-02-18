@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import { Formik, Form, Field } from 'formik'
 import { ToastContainer, toast } from 'react-toastify'
 import * as Yup from 'yup'
 import { axiosApi } from '../utils/axiosApi.js'
 import Head from 'next/head'
+
+import Projects from './projects'
+import AboutUs from './about-us'
 
 export default function Home() {
   const [disableButton, setDisableButton] = useState(false)
@@ -95,7 +99,7 @@ export default function Home() {
           <div className="mx-auto xl:h-screen">
             <div className="relative z-10 pb-8 bg-gray-darkest sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
               <Navbar />
-              <svg
+              {/* <svg
                 className="hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1/2"
                 fill="#1a1b1d"
                 viewBox="0 0 100 100"
@@ -103,7 +107,7 @@ export default function Home() {
                 aria-hidden="true"
               >
                 <polygon points="50,0 100,0 50,100 0,100" />
-              </svg>
+              </svg> */}
 
               <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                 <div className="sm:text-center lg:text-left">
@@ -114,11 +118,10 @@ export default function Home() {
                     </span>
                   </h1>
                   <p className="mt-3 text-base text-gray-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                    Do you need to develop an app?
-                    <br /> Or maybe you need a programmer to work in your team?
-                    <br /> You are on right path.
+                    We are a software house and a agency specialized in building
+                    websites and applications.
                   </p>
-                  <div className="mt-10 sm:mt-12 sm:w-10/12">
+                  <div className="mt-4 sm:mt-6 sm:w-10/12">
                     <Formik
                       initialValues={{ email: '' }}
                       validationSchema={sendMailValidation}
@@ -169,10 +172,14 @@ export default function Home() {
               className="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
               src="/images/team/lecode.WebP"
               alt="lecode-team"
+              style={{ objectPosition: 'center 30%' }}
             />
           </div>
         </div>
       </div>
+      <Projects />
+      <AboutUs />
+      <Footer />
     </>
   )
 }

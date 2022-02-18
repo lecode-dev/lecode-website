@@ -23,7 +23,7 @@ export default function ProjectCard(props) {
   return projects.map((project) => (
     <>
       <section
-        className="py-6 cursor-pointer"
+        className="pt-6 cursor-pointer"
         onClick={() => router.push(project.link)}
       >
         <Title small>{project.title}</Title>
