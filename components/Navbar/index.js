@@ -1,20 +1,36 @@
-import { Fragment } from 'react'
+import { Fragment, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 
 const navigation = [
-  { name: 'Blog', href: '/blog' },
-  { name: 'Projects', href: '/projects' },
-  { name: 'About Us', href: '/about-us' },
+  { name: 'Home', href: '/' },
+  { name: 'Projects', href: '#projects' },
+  { name: 'About Us', href: '#about-us' },
 ]
 export default function Navbar() {
+  const [scrollBackground, setScrollBackground] = useState(0)
+  const navbarControl = () => {
+    if (window.scrollY < 200) {
+      setScrollBackground(window.scrollY / 200)
+    } else {
+      setScrollBackground(1)
+    }
+  }
+  useEffect(() => {
+    window.addEventListener('scroll', navbarControl)
+    return () => window.removeEventListener('scroll', navbarControl)
+  }, [])
+
   return (
-    <nav className="bg-gray-darkest z-10">
+    <div
+      className={`fixed w-screen top-0 left-0`}
+      style={{ backgroundColor: `rgba(26,27,29,${scrollBackground})` }}
+    >
       <Popover>
         {({ open }) => (
           <>
-            <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
+            <div className="relative py-6 px-4 sm:px-6 lg:px-8">
               <nav
                 className="relative flex items-center justify-between sm:h-10 lg:justify-start"
                 aria-label="Global"
@@ -41,11 +57,12 @@ export default function Navbar() {
                 </div>
                 <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
                   {navigation.map((item) => (
-                    <Link key={item.name} href={item.href}>
-                      <a className="font-medium text-gray-200 hover:text-green-600">
-                        {item.name}
-                      </a>
-                    </Link>
+                    <a
+                      href={item.href}
+                      className="font-medium text-gray-200 hover:text-green-600"
+                    >
+                      {item.name}
+                    </a>
                   ))}
                 </div>
               </nav>
@@ -99,6 +116,6 @@ export default function Navbar() {
           </>
         )}
       </Popover>
-    </nav>
+    </div>
   )
 }

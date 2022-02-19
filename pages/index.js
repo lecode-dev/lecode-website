@@ -1,10 +1,14 @@
 import React, { useState } from 'react'
 import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
 import { Formik, Form, Field } from 'formik'
 import { ToastContainer, toast } from 'react-toastify'
 import * as Yup from 'yup'
 import { axiosApi } from '../utils/axiosApi.js'
 import Head from 'next/head'
+
+import Projects from './projects'
+import AboutUs from './about-us'
 
 export default function Home() {
   const [disableButton, setDisableButton] = useState(false)
@@ -105,11 +109,10 @@ export default function Home() {
                     </span>
                   </h1>
                   <p className="mt-3 text-base text-gray-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                    Do you need to develop an app?
-                    <br /> Or maybe you need a programmer to work in your team?
-                    <br /> You are on right path.
+                    We are a software house and a agency specialized in building
+                    websites and applications.
                   </p>
-                  <div className="mt-10 mx-auto lg:mx-0 sm:mt-12 sm:w-10/12">
+                  <div className="mt-4 sm:mt-6 sm:w-10/12">
                     <Formik
                       initialValues={{ email: '' }}
                       validationSchema={sendMailValidation}
@@ -160,10 +163,14 @@ export default function Home() {
               className="h-full w-full object-cover object-top lg:w-full lg:h-full"
               src="/images/team/lecode.WebP"
               alt="lecode-team"
+              style={{ objectPosition: 'center 30%' }}
             />
           </div>
         </div>
       </div>
+      <Projects />
+      <AboutUs />
+      <Footer />
     </>
   )
 }
