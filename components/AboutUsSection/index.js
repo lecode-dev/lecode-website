@@ -65,7 +65,7 @@ export default function AboutUsSection() {
 
         {/* Overlapping cards */}
         <section
-          className="-mt-32 max-w-7xl mx-auto relative z-10 pb-32 px-4 sm:px-6 lg:px-8"
+          className="-mt-32 max-w-7xl mx-auto relative pb-32 px-4 sm:px-6 lg:px-8"
           aria-labelledby="contact-heading"
         >
           <h2 className="sr-only" id="contact-heading">
