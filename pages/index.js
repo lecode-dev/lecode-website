@@ -58,11 +58,11 @@ export default function Home() {
         <meta property="og:url" content="https://lecode.dev/" />
         <meta
           property="og:image:secure_url"
-          itemprop="image"
+          itemProp="image"
           content="http://lecode.dev/images/lecode-seo-300.WebP"
         />
         <link
-          itemprop="thumbnailUrl"
+          itemProp="thumbnailUrl"
           href="http://lecode.dev/images/lecode-seo-300.WebP"
         />
         <meta property="og:image:type" content="image/WebP" />
