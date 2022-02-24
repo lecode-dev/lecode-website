@@ -4,9 +4,11 @@ import * as Yup from 'yup'
 import { toast } from 'react-toastify'
 import { axiosApi } from '../../utils/axiosApi'
 import Navbar from '../Navbar'
+import { useTranslations } from 'next-intl'
 
 const Home = () => {
   const [disableButton, setDisableButton] = useState(false)
+  const t = useTranslations('Home')
   const onSubmit = async (values) => {
     setDisableButton(true)
     try {
@@ -48,14 +50,13 @@ const Home = () => {
               <main className="mt-2 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                 <div className="sm:text-center lg:text-left">
                   <h1 className="text-4xl tracking-tight font-extrabold text-gray-200 sm:text-5xl md:text-6xl">
-                    <span className="block xl:inline">A better way to</span>{' '}
+                    <span className="block xl:inline">{t('title_normal')}</span>{' '}
                     <span className="block text-green-500 xl:inline">
-                      connecting People.
+                      {t('title_green')}
                     </span>
                   </h1>
                   <p className="mt-3 text-base text-gray-400 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                    We are a software house and a agency specialized in building
-                    websites and applications.
+                    {t('description')}
                   </p>
                   <div className="mt-4 sm:mt-6 sm:w-10/12">
                     <Formik
@@ -69,12 +70,12 @@ const Home = () => {
                         <div className="sm:flex">
                           <div className="min-w-0 flex-1">
                             <label htmlFor="email" className="sr-only">
-                              Email address
+                              {t('email_form')}
                             </label>
                             <Field
                               name="email"
                               type="email"
-                              placeholder="Enter your email"
+                              placeholder={t('form_placeholder')}
                               className="block w-full px-4 py-3 rounded-md border-0 text-base text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900"
                             />
                           </div>
@@ -84,17 +85,12 @@ const Home = () => {
                               disabled={disableButton}
                               className="block w-full py-3 px-4 rounded-md shadow bg-green-500 text-white font-medium hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-300 focus:ring-offset-gray-900 disabled:bg-green-900"
                             >
-                              Contact Us
+                              {t('contact_button')}
                             </button>
                           </div>
                         </div>
                         <p className="mt-3 text-sm text-gray-400 sm:mt-4">
-                          We will contact you as soon as possible. By providing
-                          your email, you agree to our{' '}
-                          <a href="#" className="font-medium text-white">
-                            terms or service
-                          </a>
-                          .
+                          {t('description_form')}
                         </p>
                       </Form>
                     </Formik>
