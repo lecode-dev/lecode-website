@@ -16,5 +16,21 @@
   "ProjectCard": {
     "spread_software": "É a melhor plataforma de transcrição de sempre. A plataforma permite que você faça um vídeo e transforme em texto. Você pode alterar o texto em tempo real quando vê o vídeo. Usamos typescript, react e firebase",
     "bentcare": "A Bentcare chegou para transformar o acesso à saúde. Por meio de uma plataforma digital, moderna e versátil, conecta profissionais de saúde a seus pacientes de forma mais rápida, segura, econômica e humanizada. Esqueça a forma tradicional de atender e agendar consultas e exames. Bem vindo a realidade de quem realmente quer o seu bem..."
+  },
+  "AboutUsSection": {
+    "name_agency": "Agência",
+    "title_agency": "Trabalhe com a gente!",
+    "description_agency": "Podemos oferecer os melhores desenvolvedores do mercado. Temos desenvolvedores especializados em JavaScript, que utilizam tecnologias como react, react-native, vue.js, node.js, next, gatsby, express, sequelize e assim por diante.",
+
+    "name_development": "Desenvolvimento de software",
+    "title_development": "Veja os ultimos projetos",
+    "description_development": "Somos especializados no desenvolvimento de software de alta qualidade. Buscamos sempre estabelecer relações de trabalho de longo prazo com clientes e tudo, no entanto, tem como premissa a qualidade que supera suas expectativas.",
+
+    "name_freelancing": "Freelancing",
+    "title_freelancing": "Mande uma mensagem",
+    "description_freelancing": "Nosso objetivo é fornecer uma experiência de freelancing impecável, combinando excelente compreensão, ótima comunicação e entrega rápida.",
+
+    "title": "Sobre a LeCode",
+    "description": "Somos uma software house e uma agência especializada na construção de sites e aplicativos modernos, excepcionais e de alta qualidade."
   }
 }
