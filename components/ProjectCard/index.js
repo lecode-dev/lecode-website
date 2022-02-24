@@ -1,25 +1,25 @@
 import { Title, Subtitle } from '../Typografy'
 import { useRouter } from 'next/router'
-const projects = [
-  {
-    image: '/images/projects/spread.png',
-    title: 'Spread Software',
-    link: 'https://app.spread.software/login',
-    subtitle: `It's the best transcription platform ever. The platform allows you to
-    take a video and transform to text. You can change the text at real
-    time when you see the video. we use typescript, react and firebase`,
-  },
-  {
-    image: '/images/projects/bentcare.png',
-    title: 'Bentcare',
-    link: 'https://bentcare.com.br/',
-    subtitle: `Bentcare has arrived to transform access to healthcare. Through a digital, modern and versatile platform, it connects healthcare professionals to their patients in a faster, safer, more economical and humanized way. Forget the traditional way of meeting and scheduling appointments and exams. Welcome to the reality of those who really want your well...`,
-  },
-]
+import { useTranslations } from 'next-intl'
 
 export default function ProjectCard(props) {
   const router = useRouter()
+  const t = useTranslations('ProjectCard')
 
+  const projects = [
+    {
+      image: '/images/projects/spread.png',
+      title: 'Spread Software',
+      link: 'https://app.spread.software/login',
+      subtitle: t('spread_software'),
+    },
+    {
+      image: '/images/projects/bentcare.png',
+      title: 'Bentcare',
+      link: 'https://bentcare.com.br/',
+      subtitle: t('bentcare'),
+    },
+  ]
   return projects.map((project) => (
     <>
       <section

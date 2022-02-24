@@ -7,5 +7,14 @@
     "contact_button": "Enviar Email",
     "form_placeholder": "Insira seu email",
     "description_form": "Vamos te contatar o mais rápido possivel."
+  },
+  "Projects": {
+    "title": "Nossos Projetos",
+    "subtitle": "Nós somos diferentes, você pode ver abaixo alguns dos projetos que nós 💚 fazer.",
+    "subtitle_divider": "Projetos"
+  },
+  "ProjectCard": {
+    "spread_software": "É a melhor plataforma de transcrição de sempre. A plataforma permite que você faça um vídeo e transforme em texto. Você pode alterar o texto em tempo real quando vê o vídeo. Usamos typescript, react e firebase",
+    "bentcare": "A Bentcare chegou para transformar o acesso à saúde. Por meio de uma plataforma digital, moderna e versátil, conecta profissionais de saúde a seus pacientes de forma mais rápida, segura, econômica e humanizada. Esqueça a forma tradicional de atender e agendar consultas e exames. Bem vindo a realidade de quem realmente quer o seu bem..."
   }
 }

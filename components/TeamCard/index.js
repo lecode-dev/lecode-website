@@ -1,5 +1,5 @@
-import React from 'react';
-import { AiFillGithub } from 'react-icons/ai';
+import React from 'react'
+import { AiFillGithub } from 'react-icons/ai'
 
 export default function TeamCard({ person }) {
   return (
@@ -8,7 +8,7 @@ export default function TeamCard({ person }) {
         <img
           className="mx-auto object-cover h-40 w-40 rounded-full xl:w-56 xl:h-56"
           src={person?.imageUrl}
-          alt=""
+          alt={person?.name}
         />
         <div className="space-y-2 xl:flex xl:items-center xl:justify-between">
           <div className="font-medium text-lg leading-6 space-y-1">
@@ -56,5 +56,5 @@ export default function TeamCard({ person }) {
         </div>
       </div>
     </li>
-  );
+  )
 }
