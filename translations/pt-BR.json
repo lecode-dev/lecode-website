@@ -41,5 +41,8 @@
     "home": "Início",
     "projects": "Projetos",
     "about_us": "Sobre nós"
+  },
+  "Footer": {
+    "all_rights": "Todos os direitos reservados."
   }
 }
