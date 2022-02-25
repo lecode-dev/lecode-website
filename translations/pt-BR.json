@@ -44,5 +44,14 @@
   },
   "Footer": {
     "all_rights": "Todos os direitos reservados."
+  },
+  "Modal": {
+    "message": "Mensagem",
+    "send": "Enviar",
+    "cancel": "Cancelar",
+    "invalid": "Email Inválido!",
+    "too_short": "Muito pequeno!",
+    "too_long": "Muito grande!",
+    "required": "Esse campo é obrigatório"
   }
 }

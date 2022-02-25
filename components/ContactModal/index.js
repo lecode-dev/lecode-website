@@ -1,50 +1,52 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment, useRef, useState } from "react";
-import { Formik, Form, Field } from "formik";
-import { Dialog, Transition } from "@headlessui/react";
-import { ToastContainer, toast } from "react-toastify";
-import * as Yup from "yup";
-import { axiosApi } from "../../utils/axiosApi";
+import { Fragment, useRef, useState } from 'react'
+import { Formik, Form, Field } from 'formik'
+import { Dialog, Transition } from '@headlessui/react'
+import { ToastContainer, toast } from 'react-toastify'
+import * as Yup from 'yup'
+import { axiosApi } from '../../utils/axiosApi'
+import { useTranslations } from 'next-intl'
 
 export default function ContactModal({ onClose, open }) {
-  const sendButtonRef = useRef(null);
-  const [disableButton, setDisableButton] = useState(false);
+  const sendButtonRef = useRef(null)
+  const t = useTranslations('Modal')
+  const [disableButton, setDisableButton] = useState(false)
   const onSubmit = async (values, ...rest) => {
     try {
-      setDisableButton(true);
-      const response = await axiosApi.post(`/contact`, values);
-      const { message } = response.data;
+      setDisableButton(true)
+      const response = await axiosApi.post(`/contact`, values)
+      const { message } = response.data
       toast.success(message, {
-        position: "top-right",
+        position: 'top-right',
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-      });
-      setDisableButton(false);
-      onClose();
+      })
+      setDisableButton(false)
+      onClose()
     } catch (err) {
-      toast.error("Invalid Email!", {
-        position: "top-right",
+      toast.error(t('invalid'), {
+        position: 'top-right',
         autoClose: 5000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-      });
+      })
     }
-  };
+  }
   const sendMailValidation = Yup.object().shape({
-    email: Yup.string().email("Invalid email").required("Required"),
+    email: Yup.string().email(t('invalid')).required('Required'),
     message: Yup.string()
-      .min(2, "Too Short!")
-      .max(100, "Too Long!")
-      .required("This field is Required"),
+      .min(2, t('too_short'))
+      .max(100, t('too_long'))
+      .required(t('required')),
     password: Yup.string(),
-  });
+  })
 
   return (
     <>
@@ -57,14 +59,14 @@ export default function ContactModal({ onClose, open }) {
         rtl={false}
         pauseOnFocusLoss
         draggable
-        theme={"dark"}
+        theme={'dark'}
         pauseOnHover
       />
       <Formik
         initialValues={{
-          email: "",
-          message: "",
-          password: "",
+          email: '',
+          message: '',
+          password: '',
         }}
         validationSchema={sendMailValidation}
         onSubmit={onSubmit}
@@ -79,7 +81,7 @@ export default function ContactModal({ onClose, open }) {
               open={open}
               onClose={onClose}
             >
-              <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+              <div className="flex items-end justify-center min-h-screen pt-2 px-4 pb-20 text-center sm:block sm:p-0">
                 <Transition.Child
                   as={Fragment}
                   enter="ease-out duration-300"
@@ -113,15 +115,15 @@ export default function ContactModal({ onClose, open }) {
                   m:p-6"
                   >
                     <div>
-                      <div className="mt-1 text-center sm:mt-5">
-                        <div className="mt-">
+                      <div className="text-center">
+                        <div>
                           <label
                             htmlFor="email"
                             className="block text-left text-sm font-medium text-green-500"
                           >
                             Email
                           </label>
-                          <div className="mt-1">
+                          <div>
                             <Field
                               type="email"
                               name="email"
@@ -141,7 +143,7 @@ export default function ContactModal({ onClose, open }) {
                             htmlFor="message"
                             className="block text-sm text-left font-medium mb-1 text-green-500 sm:mt-px sm:pt-2"
                           >
-                            Message
+                            {t('message')}
                           </label>
                           <div className="mt-1 sm:mt-0 sm:col-span-2">
                             <Field
@@ -181,14 +183,14 @@ export default function ContactModal({ onClose, open }) {
                         disabled={disableButton}
                         ref={sendButtonRef}
                       >
-                        Send
+                        {t('send')}
                       </button>
                       <button
                         type="button"
                         className="mt-3 w-full inline-flex justify-center rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-base font-medium text-gray-700 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-200 sm:mt-0 sm:col-start-1 sm:text-sm"
                         onClick={onClose}
                       >
-                        Cancel
+                        {t('cancel')}
                       </button>
                     </div>
                   </Form>
@@ -199,5 +201,5 @@ export default function ContactModal({ onClose, open }) {
         )}
       </Formik>
     </>
-  );
+  )
 }

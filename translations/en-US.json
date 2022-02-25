@@ -44,5 +44,14 @@
   },
   "Footer": {
     "all_rights": "All rights reserved."
+  },
+  "Modal": {
+    "message": "Message",
+    "send": "Send",
+    "cancel": "Cancel",
+    "invalid": "Invalid Email!",
+    "too_short": "Too Short!",
+    "too_long": "Too Long!",
+    "required": "This field is Required"
   }
 }
