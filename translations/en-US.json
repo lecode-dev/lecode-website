@@ -32,5 +32,9 @@
 
     "title": "About LeCode",
     "description": "We are a software house and a agency specialized in building modern, exceptional, high-quality websites and applications."
+  },
+  "TeamSession": {
+    "title": "Meet our team",
+    "description": "Know the better that our team can offer!<br></br> At <title>LeCode</title> we have advanced software, advanced research for advanced people."
   }
 }

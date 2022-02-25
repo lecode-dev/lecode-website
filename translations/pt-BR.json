@@ -32,5 +32,9 @@
 
     "title": "Sobre a LeCode",
     "description": "Somos uma software house e uma agência especializada na construção de sites e aplicativos modernos, excepcionais e de alta qualidade."
+  },
+  "TeamSession": {
+    "title": "Conheça nosso time",
+    "description": "Veja o que o nosso time consegue fazer!<br></br> Na <title>LeCode</title> nós temos tecnologias avançadas e estudos avançadas para pessoas avançadas."
   }
 }
