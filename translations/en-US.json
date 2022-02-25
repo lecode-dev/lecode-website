@@ -1,0 +1,57 @@
+{
+  "Home": {
+    "title_normal": "A better way to",
+    "title_green": "connecting People.",
+    "description": "We are a software house and a agency specialized in building websites and applications.",
+    "email_form": "Email address",
+    "contact_button": "Contact Us",
+    "form_placeholder": "Enter your email",
+    "description_form": "We will contact you as soon as possible."
+  },
+  "Projects": {
+    "title": "Our Projects",
+    "subtitle": "We think different, you can see below some of our projects made with 💚.",
+    "subtitle_divider": "Projets"
+  },
+  "ProjectCard": {
+    "spread_software": "It's the best transcription platform ever. The platform allows you to take a video  and transform to text. You can change the text at real time when you see the video. we use typescript, react and firebase",
+    "bentcare": "Bentcare has arrived to transform access to healthcare. Through a digital, modern and versatile platform, it connects healthcare professionals to their patients in a faster, safer, more economical and humanized way. Forget the traditional way of meeting and scheduling appointments and exams. Welcome to the reality of those who really want your well..."
+  },
+  "AboutUsSection": {
+    "name_agency": "Agency",
+    "title_agency": "Work with us",
+    "description_agency": "We can offer the best developers in the market. We have developers specialized in JavaScript, that use technologies like react, react-native, vue.js, node.js, next, gatsby, express, sequelize, and so on. ",
+
+    "name_development": "Software development",
+    "title_development": "See last projects",
+    "description_development": "We are specialized to develop high-quality software. We always aim at striking long-term working relations with outstanding clients and everything is notwithstanding premised on quality that surpasses your expectations. ",
+
+    "name_freelancing": "Freelancing",
+    "title_freelancing": "Contact us",
+    "description_freelancing": "We aim to provide a flawless freelance experience, combining excellent understanding, great communication, and speedy delivery.",
+
+    "title": "About LeCode",
+    "description": "We are a software house and a agency specialized in building modern, exceptional, high-quality websites and applications."
+  },
+  "TeamSession": {
+    "title": "Meet our team",
+    "description": "Know the better that our team can offer!<br></br> At <title>LeCode</title> we have advanced software, advanced research for advanced people."
+  },
+  "Navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "about_us": "About Us"
+  },
+  "Footer": {
+    "all_rights": "All rights reserved."
+  },
+  "Modal": {
+    "message": "Message",
+    "send": "Send",
+    "cancel": "Cancel",
+    "invalid": "Invalid Email!",
+    "too_short": "Too Short!",
+    "too_long": "Too Long!",
+    "required": "This field is Required"
+  }
+}

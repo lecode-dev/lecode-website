@@ -1,0 +1,57 @@
+{
+  "Home": {
+    "title_normal": "Transformando idéias",
+    "title_green": "em realidade.",
+    "description": "Somos uma software house e uma agência especializada na construção de sites e aplicativos.",
+    "email_form": "Endereço de email",
+    "contact_button": "Enviar Email",
+    "form_placeholder": "Insira seu email",
+    "description_form": "Vamos te contatar o mais rápido possivel."
+  },
+  "Projects": {
+    "title": "Nossos Projetos",
+    "subtitle": "Nós somos diferentes, você pode ver abaixo alguns dos projetos que nós 💚 fazer.",
+    "subtitle_divider": "Projetos"
+  },
+  "ProjectCard": {
+    "spread_software": "É a melhor plataforma de transcrição de sempre. A plataforma permite que você faça um vídeo e transforme em texto. Você pode alterar o texto em tempo real quando vê o vídeo. Usamos typescript, react e firebase",
+    "bentcare": "A Bentcare chegou para transformar o acesso à saúde. Por meio de uma plataforma digital, moderna e versátil, conecta profissionais de saúde a seus pacientes de forma mais rápida, segura, econômica e humanizada. Esqueça a forma tradicional de atender e agendar consultas e exames. Bem vindo a realidade de quem realmente quer o seu bem..."
+  },
+  "AboutUsSection": {
+    "name_agency": "Agência",
+    "title_agency": "Trabalhe com a gente!",
+    "description_agency": "Podemos oferecer os melhores desenvolvedores do mercado. Temos desenvolvedores especializados em JavaScript, que utilizam tecnologias como react, react-native, vue.js, node.js, next, gatsby, express, sequelize e assim por diante.",
+
+    "name_development": "Desenvolvimento de software",
+    "title_development": "Veja os ultimos projetos",
+    "description_development": "Somos especializados no desenvolvimento de software de alta qualidade. Buscamos sempre estabelecer relações de trabalho de longo prazo com clientes e tudo, no entanto, tem como premissa a qualidade que supera suas expectativas.",
+
+    "name_freelancing": "Freelancing",
+    "title_freelancing": "Mande uma mensagem",
+    "description_freelancing": "Nosso objetivo é fornecer uma experiência de freelancing impecável, combinando excelente compreensão, ótima comunicação e entrega rápida.",
+
+    "title": "Sobre a LeCode",
+    "description": "Somos uma software house e uma agência especializada na construção de sites e aplicativos modernos, excepcionais e de alta qualidade."
+  },
+  "TeamSession": {
+    "title": "Conheça nosso time",
+    "description": "Veja o que o nosso time consegue fazer!<br></br> Na <title>LeCode</title> nós temos tecnologias avançadas e estudos avançadas para pessoas avançadas."
+  },
+  "Navbar": {
+    "home": "Início",
+    "projects": "Projetos",
+    "about_us": "Sobre nós"
+  },
+  "Footer": {
+    "all_rights": "Todos os direitos reservados."
+  },
+  "Modal": {
+    "message": "Mensagem",
+    "send": "Enviar",
+    "cancel": "Cancelar",
+    "invalid": "Email Inválido!",
+    "too_short": "Muito pequeno!",
+    "too_long": "Muito grande!",
+    "required": "Esse campo é obrigatório"
+  }
+}

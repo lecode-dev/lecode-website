@@ -3,33 +3,31 @@ import { useRouter } from 'next/router'
 import { DiJavascript1 } from 'react-icons/di'
 import { MdDeveloperMode, MdChat } from 'react-icons/md'
 import ContactModal from '../ContactModal'
-
-const supportLinks = [
-  {
-    name: 'Agency',
-    title: 'Work with us',
-    description:
-      'We can offer the best developers in the market. We have developers specialized in JavaScript, that use technologies like react, react-native, vue.js, node.js, next, gatsby, express, sequelize, and so on. ',
-    icon: DiJavascript1,
-  },
-  {
-    name: 'Software development',
-    title: 'See last projects',
-    href: '/projects',
-    description:
-      'We are specialized to develop high-quality software. We always aim at striking long-term working relations with outstanding clients and everything is notwithstanding premised on quality that surpasses your expectations. ',
-    icon: MdDeveloperMode,
-  },
-  {
-    name: 'Freelancing',
-    title: 'Contact us',
-    description:
-      'We aim to provide a flawless freelance experience, combining excellent understanding, great communication, and speedy delivery.',
-    icon: MdChat,
-  },
-]
+import { useTranslations } from 'next-intl'
 
 export default function AboutUsSection() {
+  const t = useTranslations('AboutUsSection')
+  const supportLinks = [
+    {
+      name: t('name_agency'),
+      title: t('title_agency'),
+      description: t('description_agency'),
+      icon: DiJavascript1,
+    },
+    {
+      name: t('name_development'),
+      title: t('title_development'),
+      href: '#projects',
+      description: t('description_development'),
+      icon: MdDeveloperMode,
+    },
+    {
+      name: t('name_freelancing'),
+      title: t('title_freelancing'),
+      description: t('description_freelancing'),
+      icon: MdChat,
+    },
+  ]
   const [open, setOpen] = useState(false)
   const router = useRouter()
   const onClose = () => {
@@ -54,11 +52,10 @@ export default function AboutUsSection() {
           </div>
           <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
             <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-5xl lg:text-6xl">
-              About LeCode
+              {t('title')}
             </h1>
             <p className="mt-6 max-w-3xl text-xl text-white">
-              We are a software house and a agency specialized in building
-              modern, exceptional, high-quality websites and applications.
+              {t('description')}
             </p>
           </div>
         </div>

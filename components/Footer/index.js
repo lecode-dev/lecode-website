@@ -1,3 +1,5 @@
+import { useTranslations } from 'next-intl'
+
 /* This example requires Tailwind CSS v2.0+ */
 const navigation = [
   {
@@ -48,9 +50,10 @@ const navigation = [
       </svg>
     ),
   },
-];
+]
 
 export default function Footer() {
+  const t = useTranslations('Footer')
   return (
     <footer className="bg-gray-darkest">
       <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 md:flex md:items-center md:justify-between lg:px-8">
@@ -68,10 +71,10 @@ export default function Footer() {
         </div>
         <div className="mt-8 md:mt-0 md:order-1">
           <p className="text-center text-base text-gray-400">
-            &copy; 2020 LeCode, Inc. All rights reserved.
+            &copy; 2020 LeCode, Inc. {t('all_rights')}
           </p>
         </div>
       </div>
     </footer>
-  );
+  )
 }
