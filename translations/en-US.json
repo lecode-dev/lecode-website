@@ -36,5 +36,10 @@
   "TeamSession": {
     "title": "Meet our team",
     "description": "Know the better that our team can offer!<br></br> At <title>LeCode</title> we have advanced software, advanced research for advanced people."
+  },
+  "Navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "about_us": "About Us"
   }
 }

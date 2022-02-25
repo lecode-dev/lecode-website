@@ -36,5 +36,10 @@
   "TeamSession": {
     "title": "Conheça nosso time",
     "description": "Veja o que o nosso time consegue fazer!<br></br> Na <title>LeCode</title> nós temos tecnologias avançadas e estudos avançadas para pessoas avançadas."
+  },
+  "Navbar": {
+    "home": "Início",
+    "projects": "Projetos",
+    "about_us": "Sobre nós"
   }
 }

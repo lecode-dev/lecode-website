@@ -2,6 +2,7 @@ import { Fragment, useEffect, useState } from 'react'
 import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { useTranslations } from 'next-intl'
 
 const navigation = [
   { name: 'Home', href: '#' },
@@ -10,6 +11,12 @@ const navigation = [
 ]
 export default function Navbar() {
   const [scrollBackground, setScrollBackground] = useState(0)
+  const t = useTranslations('Navbar')
+  const navigation = [
+    { name: t('home'), href: '#' },
+    { name: t('projects'), href: '#projects' },
+    { name: t('about_us'), href: '#about-us' },
+  ]
   const navbarControl = () => {
     if (window.scrollY < 200) {
       setScrollBackground(window.scrollY / 200)
