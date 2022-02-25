@@ -17,7 +17,7 @@ export default function AboutUsSection() {
     {
       name: t('name_development'),
       title: t('title_development'),
-      href: '/projects',
+      href: '#projects',
       description: t('description_development'),
       icon: MdDeveloperMode,
     },
