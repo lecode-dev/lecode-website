@@ -14,8 +14,11 @@
     "subtitle_divider": "Projetos"
   },
   "ProjectCard": {
-    "spread_software": "É a melhor plataforma de transcrição de sempre. A plataforma permite que você faça um vídeo e transforme em texto. Você pode alterar o texto em tempo real quando vê o vídeo. Usamos typescript, react e firebase",
-    "bentcare": "A Bentcare chegou para transformar o acesso à saúde. Por meio de uma plataforma digital, moderna e versátil, conecta profissionais de saúde a seus pacientes de forma mais rápida, segura, econômica e humanizada. Esqueça a forma tradicional de atender e agendar consultas e exames. Bem vindo a realidade de quem realmente quer o seu bem..."
+    "spread_software": "Plataforma que permite que você faça um vídeo e transforme em texto. Foi usado typescript, react.js e firebase.",
+    "bentcare": "A Bentcare é uma plataforma digital chegou para transformar o acesso à saúde. Foi usado typescript, react.js, storybook and node.js.",
+    "sk-company": "StoreKeeper é uma solução de pagamento, sistema de loja virtual e muito mais. Foi usado Javascript, react.js, storybook e redux.",
+    "ethics-net": "Ethics net é uma comunidade ensinando comportamento preferencial às máquinas. Foi usado Javascript, react.js, node.js and mongoDB.",
+    "my-aspire-quotes": "MyAspireQuotes é uma plataforma de saúde que oferece o melhor plano de saúde. Foi usado Javascript, bootstrap, and cypress."
   },
   "AboutUsSection": {
     "name_agency": "Agência",
