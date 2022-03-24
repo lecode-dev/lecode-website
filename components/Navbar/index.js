@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { useTranslations } from 'next-intl'
+import TranslateButton from '../TranslateButton'
 
 const navigation = [
   { name: 'Home', href: '#' },
@@ -31,7 +32,7 @@ export default function Navbar() {
 
   return (
     <div
-      className={`fixed w-screen top-0 left-0`}
+      className={`fixed w-screen top-0 left-0 z-10`}
       style={{ backgroundColor: `rgba(26,27,29,${scrollBackground})` }}
     >
       <Popover>
@@ -55,6 +56,7 @@ export default function Navbar() {
                       </a>
                     </Link>
                     <div className="-mr-2 flex items-center md:hidden">
+                      <TranslateButton />
                       <Popover.Button className="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                         <span className="sr-only">Open main menu</span>
                         <MenuIcon className="h-6 w-6" aria-hidden="true" />
@@ -62,16 +64,20 @@ export default function Navbar() {
                     </div>
                   </div>
                 </div>
-                <div className="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                  {navigation.map((item) => (
-                    <a
-                      key={item.name}
-                      href={item.href}
-                      className="font-medium text-gray-200 hover:text-green-600"
-                    >
-                      {item.name}
-                    </a>
-                  ))}
+
+                <div className="hidden md:block w-full">
+                  <div className="flex md:ml-10 md:pr-4 md:space-x-8 mr-4 w-full ">
+                    {navigation.map((item) => (
+                      <a
+                        key={item.name}
+                        href={item.href}
+                        className="font-medium text-gray-200 hover:text-green-600"
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                    <TranslateButton />
+                  </div>
                 </div>
               </nav>
             </div>
