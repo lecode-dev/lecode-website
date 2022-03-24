@@ -44,7 +44,7 @@ const Home = () => {
       <div className="min-h-screen">
         <div className="relative h-screen bg-gray-darkest overflow-hidden">
           <div className="mx-auto xl:h-screen">
-            <div className="relative z-10 pb-8 lg:h-screen bg-gray-darkest sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+            <div className="relative pb-8 lg:h-screen bg-gray-darkest sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
               <Navbar />
 
               <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 mt-28">
@@ -99,7 +99,7 @@ const Home = () => {
               </main>
             </div>
           </div>
-          <div className="flex-grow z-20 lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+          <div className="flex-grow lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
             <img
               className="h-full w-full object-cover object-top lg:w-full lg:h-full"
               src="/images/team/lecode.WebP"
