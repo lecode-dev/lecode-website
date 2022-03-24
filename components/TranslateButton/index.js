@@ -14,8 +14,8 @@ const TranslateButton = () => {
         name="Languages"
         id="languages"
       >
-        <option value="pt-BR">🇧🇷</option>
         <option value="en-US">🇺🇸</option>
+        <option value="pt-BR">🇧🇷</option>
       </select>
     </TranslateWrapper>
   )
