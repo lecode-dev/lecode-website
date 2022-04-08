@@ -5,7 +5,7 @@ import TeamCard from '../TeamCard'
 const empoloyers = [
   {
     name: 'Erick Willian',
-    role: 'CTO',
+    role: 'CEO',
     imageUrl: '/images/team/erick2.jpeg',
     githubUrl: 'https://github.com/Erickinhou',
     linkedinUrl: 'https://www.linkedin.com/in/erick-willian-8553a2133/',
@@ -40,18 +40,18 @@ const empoloyers = [
     linkedinUrl: 'https://www.linkedin.com/in/pablo-felipe-lnkdn/',
   },
   {
-    name: 'Lucas Souza',
-    role: 'Software Developer',
-    imageUrl: '/images/team/lucas.jpeg',
-    githubUrl: 'https://github.com/lucasfilipess',
-    linkedinUrl: 'https://www.linkedin.com/in/lucas-souza-95b867174/',
-  },
-  {
     name: 'Marianne Matos',
     role: 'Software Developer',
     imageUrl: '/images/team/mari.jpg',
     githubUrl: 'https://github.com/MariMatos2112',
     linkedinUrl: 'https://www.linkedin.com/in/marianne-matos-pereira/',
+  },
+  {
+    name: 'Matheus Soares ',
+    role: 'Software Developer',
+    imageUrl: '/images/team/matheus.svg',
+    githubUrl: 'https://github.com/MsCardoso77',
+    linkedinUrl: '#',
   },
   // More people...
 ]
