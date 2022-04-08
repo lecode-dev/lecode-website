@@ -49,7 +49,10 @@ export default function ProjectCard(props) {
         <div className="max-w-2xl mx-auto lg:max-w-none">
           <div className="mt-6 space-y-12 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-x-6">
             {projects.map((project) => (
-              <div key={project.name} className="group relative cursor-pointer">
+              <div
+                key={project.name}
+                className="group relative cursor-pointer p-2"
+              >
                 <div className="relative w-full h-80 bg-white rounded-lg overflow-hidden group-hover:opacity-75 sm:aspect-w-2 sm:aspect-h-1 sm:h-64 lg:aspect-w-1 lg:aspect-h-1">
                   <img
                     src={project.imageSrc}
