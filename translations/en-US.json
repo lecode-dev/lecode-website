@@ -9,9 +9,9 @@
     "description_form": "We will contact you as soon as possible."
   },
   "Projects": {
-    "title": "Our Projects",
-    "subtitle": "We think different, you can see below some of our projects made with 💚.",
-    "subtitle_divider": "Projets"
+    "title": "Projects",
+    "subtitle": "We think different, you can see below some of projects that we worked with 💚.",
+    "subtitle_divider": "Projects"
   },
   "ProjectCard": {
     "spread_software": "Platform that allows you to make a video and turn it into text. Typescript, react.js and firebase were used.",
