@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
         <div className="mt-8 md:mt-0 md:order-1">
           <p className="text-center text-base text-gray-400">
-            &copy; 2020 LeCode, Inc. {t('all_rights')}
+            &copy; 2022 LeCode, Inc. {t('all_rights')}
           </p>
         </div>
       </div>

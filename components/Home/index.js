@@ -42,7 +42,7 @@ const Home = () => {
   return (
     <>
       <div className="min-h-screen">
-        <div className="relative h-screen bg-gray-darkest overflow-hidden">
+        <div className="relative lg:h-screen bg-gray-darkest overflow-hidden">
           <div className="mx-auto xl:h-screen">
             <div className="relative pb-8 lg:h-screen bg-gray-darkest sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
               <Navbar />
@@ -101,10 +101,9 @@ const Home = () => {
           </div>
           <div className="flex-grow lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
             <img
-              className="h-full w-full object-cover object-top lg:w-full lg:h-full"
-              src="/images/team/lecode.WebP"
+              className="h-96 w-full object-cover object-top lg:w-full lg:h-full"
+              src="/images/lecode-working-trabalhando.WebP"
               alt="lecode-team"
-              style={{ objectPosition: 'center 30%' }}
             />
           </div>
         </div>

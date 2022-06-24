@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const TranslateWrapper = styled.div`
   z-index: 10;
-  margin: auto 15px auto auto;
+  margin: auto 25px auto auto;
   background-color: rgba(26, 27, 29) !important;
   outline: none;
   border: none;

@@ -1,12 +1,16 @@
 import router from 'next/router'
 import React from 'react'
+import { useEffect, useState } from 'react'
 import { TranslateWrapper } from './styles'
 
 const TranslateButton = () => {
+  const [language, setLanguage] = useState('pt-BR')
   const handleChange = (locale) => {
-    console.log(locale)
-    router.push(`/`, `/${locale}`, { locale })
+    setLanguage(locale)
   }
+  useEffect(() => {
+    router.push(`/`, `/${language}`, { language })
+  }, [language])
   return (
     <TranslateWrapper>
       <select
@@ -14,8 +18,12 @@ const TranslateButton = () => {
         name="Languages"
         id="languages"
       >
-        <option value="en-US">🇺🇸</option>
-        <option value="pt-BR">🇧🇷</option>
+        <option selected={language === 'en-US'} value="en-US">
+          🇺🇸
+        </option>
+        <option selected={language === 'pt-BR'} value="pt-BR">
+          🇧🇷
+        </option>
       </select>
     </TranslateWrapper>
   )
