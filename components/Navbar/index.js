@@ -46,14 +46,12 @@ export default function Navbar() {
                 <div className="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                   <div className="flex items-center justify-between w-full md:w-auto">
                     <Link href="/">
-                      <a>
-                        <span className="sr-only">Workflow</span>
-                        <img
-                          className="h-14 w-auto sm:h-20"
-                          src="/images/lecode.WebP"
-                          alt="lecode-icon"
-                        />
-                      </a>
+                      <span className="sr-only">Workflow</span>
+                      <img
+                        className="h-14 w-auto sm:h-20"
+                        src="/images/lecode.WebP"
+                        alt="lecode-icon"
+                      />
                     </Link>
                     <div className="-mr-2 flex items-center md:hidden">
                       <TranslateButton />
