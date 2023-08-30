@@ -13,7 +13,7 @@ const empoloyers = [
   {
     name: 'Matheus Soares',
     role: 'Co-Founder',
-    imageUrl: '/images/team/matheus.jpeg',
+    imageUrl: '/images/team/matheus.png',
     githubUrl: 'https://github.com/MsCardoso77',
     linkedinUrl: 'https://www.linkedin.com/in/matheus-soares-b22306237/',
   },
