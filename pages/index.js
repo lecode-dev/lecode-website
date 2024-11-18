@@ -34,6 +34,7 @@ export default function App() {
 }
 
 export function getStaticProps({ locale }) {
+  
   return {
     props: {
       messages: require(`../translations/${locale}.json`),

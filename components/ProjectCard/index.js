@@ -8,11 +8,11 @@ export default function ProjectCard(props) {
 
   const projects = [
     {
-      imageSrc: '/images/projects/spread.png',
-      title: 'Spread Software',
-      link: 'https://app.spread.software/login',
-      description: t('spread_software'),
-      imageAlt: 'spread-software',
+      imageSrc: '/images/projects/workStory.webp',
+      title: 'WorkStory',
+      link: 'https://home.workstory.team/',
+      description: t('work_story'),
+      imageAlt: 'image work-story',
     },
     {
       imageSrc: '/images/projects/bentcare.png',

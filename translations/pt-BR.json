@@ -14,7 +14,7 @@
     "subtitle_divider": "Projetos"
   },
   "ProjectCard": {
-    "spread_software": "Plataforma que permite que você faça um vídeo e transforme em texto. Foi usado typescript, react.js e firebase.",
+    "work_story": "Um processo de avaliação de desempenho projetado para as equipes ocupadas de hoje.",
     "bentcare": "A Bentcare é uma plataforma digital chegou para transformar o acesso à saúde. Foi usado typescript, react.js, storybook and node.js.",
     "sk-company": "StoreKeeper é uma solução de pagamento, sistema de loja virtual e muito mais. Foi usado Javascript, react.js, storybook e redux.",
     "ethics-net": "Ethics net é uma comunidade ensinando comportamento preferencial às máquinas. Foi usado Javascript, react.js, node.js and mongoDB.",

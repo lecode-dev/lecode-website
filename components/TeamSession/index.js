@@ -104,7 +104,6 @@ export default function Team() {
             <p className="text-xl text-gray-300">
               {t.rich('description', {
                 title: (children) => {
-                  console.log('children', children)
                   return <b className="text-green-500">{children} </b>
                 },
                 br: () => <br />,

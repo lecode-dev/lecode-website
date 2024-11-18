@@ -102,7 +102,7 @@ const Home = () => {
           <div className="flex-grow lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
             <img
               className="h-96 w-full object-cover object-top lg:w-full lg:h-full"
-              src="/images/team/lecode.WebP"
+              src="/images/team/working-image.jpg"
               alt="lecode-team"
             />
           </div>
